@@ -18,26 +18,11 @@ public class Main {
         me.lastName = "Warda";
         me.pet = dog;
 
-        me.pet.feed();
-        me.pet.feed();
-        me.pet.takeForAWalk();
-        me.pet.takeForAWalk();
-        me.pet.takeForAWalk();
-        me.pet.takeForAWalk();
-        me.pet.takeForAWalk();
-        me.pet.takeForAWalk();
-        me.pet.takeForAWalk();
-        me.pet.takeForAWalk();
-        me.pet.takeForAWalk();
-        me.pet.takeForAWalk();
-        me.pet.takeForAWalk();
-        me.pet.takeForAWalk();
-        me.pet.takeForAWalk();
-        me.pet.takeForAWalk();
-        me.pet.feed();
+        Car dirtyOne = new Car("Fiat", "Bravo", 2014, 1.8);
+        dirtyOne.plates = "GDA1234";
+        me.car = dirtyOne;
 
-
-
+        System.out.println(me.car.plates);
 
     }
 }
