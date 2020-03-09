@@ -20,8 +20,34 @@ public class Main {
 
         me.pet.feed();
         me.pet.feed();
+        me.pet.takeForAWalk();
+        me.pet.takeForAWalk();
+        me.pet.takeForAWalk();
+        me.pet.takeForAWalk();
+        me.pet.takeForAWalk();
+        me.pet.takeForAWalk();
+        me.pet.takeForAWalk();
+        me.pet.takeForAWalk();
+        me.pet.takeForAWalk();
+        me.pet.takeForAWalk();
+        me.pet.takeForAWalk();
+        me.pet.takeForAWalk();
+        me.pet.takeForAWalk();
+        me.pet.takeForAWalk();
         me.pet.feed();
-        me.pet.feed();
-        me.pet.feed();
+
+
+
+
     }
 }
+
+
+
+
+
+
+
+
+
+

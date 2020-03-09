@@ -19,13 +19,28 @@ public class Animal {
             this.weight = DEFAULT_LION_WEIGHT;
         } else if (species == "mouse") {
             this.weight = DEFAULT_MOUSE_WEIGHT;
-        } else if(species == "dog"){
+        } else if (species == "dog") {
             this.weight = DEFAULT_DOG_WEIGHT;
         }
     }
 
     void feed() {
-        weight += 0.1;
-        System.out.println("thx for food my weight is now " + this.weight);
+        if (weight <= 0) {
+            System.out.println("too late, sorry");
+        } else {
+            weight ++;
+            System.out.println("thx for food my weight is now " + this.weight);
+        }
+    }
+
+    void takeForAWalk(){
+        weight--;
+        if(weight <= 0){
+            System.out.println("that a dead animal you freak");
+        } else if(weight <= 3){
+            System.out.println("thx I'm hungry");
+        }else{
+            System.out.println("thx for a walk");
+        }
     }
 }
