@@ -7,6 +7,7 @@ public class Car {
     public final Double engineVolume;
 
     public String plates;
+    private Double value = 2000.0;
 
 
     public Car(String producer, String model, Integer yearOfProduction, Double engineVolumne) {
@@ -14,5 +15,9 @@ public class Car {
         this.model = model;
         this.yearOfProduction = yearOfProduction;
         this.engineVolume = engineVolumne;
+    }
+
+    public Double getValue(){
+        return this.value;
     }
 }

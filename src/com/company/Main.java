@@ -20,11 +20,11 @@ public class Main {
 
         Car dirtyOne = new Car("Fiat", "Bravo", 2014, 1.8);
         dirtyOne.plates = "GDA1234";
-        me.car = dirtyOne;
+        me.setCar(dirtyOne);
 
-        System.out.println(me.car.plates);
+        System.out.println(me.getCar().plates);
 
-        System.out.println("testesteststests");
+        System.out.println("I earn " + me.getSalary() + "UZB");
 
     }
 }
