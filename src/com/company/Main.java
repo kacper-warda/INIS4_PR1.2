@@ -24,6 +24,8 @@ public class Main {
 
         System.out.println(me.car.plates);
 
+        System.out.println("testesteststests");
+
     }
 }
 
