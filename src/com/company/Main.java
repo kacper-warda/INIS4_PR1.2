@@ -1,5 +1,8 @@
 package com.company;
 
+import com.company.devices.Car;
+import com.company.devices.Phone;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -37,8 +40,12 @@ public class Main {
         System.out.println(me.getCar());
         System.out.println(myWife.getCar());
         System.out.println(me);
+
         System.out.println(me.pet);
 
+        System.out.println(me.species);
+
+        System.out.println(new Phone("Nokia", "3310", 1.0, false, 2000) instanceof Object);
     }
 }
 
