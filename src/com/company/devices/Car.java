@@ -12,6 +12,11 @@ public class Car extends Device {
         this.engineVolume = engineVolumne;
     }
 
+    @Override
+    void turnOn() {
+        System.out.println("yeah now you can drive around");
+    }
+
     public String toString() {
         return super.toString() + " " + this.plates;
     }

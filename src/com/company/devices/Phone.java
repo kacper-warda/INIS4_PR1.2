@@ -9,4 +9,9 @@ public class Phone extends Device {
         this.screenSize = screenSize;
         this.isAndroid = isAndroid;
     }
+
+    @Override
+    void turnOn() {
+        System.out.println("hello world");
+    }
 }

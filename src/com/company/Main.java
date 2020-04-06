@@ -1,6 +1,7 @@
 package com.company;
 
 import com.company.devices.Car;
+import com.company.devices.Device;
 import com.company.devices.Phone;
 
 public class Main {
@@ -46,6 +47,18 @@ public class Main {
         System.out.println(me.species);
 
         System.out.println(new Phone("Nokia", "3310", 1.0, false, 2000) instanceof Object);
+
+        try {
+            me.pet.beEaten();
+
+            me.pet.sell();
+            me.getCar().sell();
+            me.sell();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
     }
 }
 

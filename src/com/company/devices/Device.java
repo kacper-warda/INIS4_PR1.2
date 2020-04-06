@@ -1,6 +1,8 @@
 package com.company.devices;
 
-public class Device {
+import com.company.Saleable;
+
+public abstract class Device implements Saleable {
     public final String producer;
     public final String model;
     public final Integer yearOfProduction;
@@ -12,6 +14,7 @@ public class Device {
         this.yearOfProduction = yearOfProduction;
     }
 
+    abstract void turnOn();
 
     public Double getValue() {
         return this.value;
@@ -19,5 +22,9 @@ public class Device {
 
     public String toString() {
         return this.producer + " " + this.model;
+    }
+
+    public void sell() {
+        System.out.println(" now you sold " + this);
     }
 }
