@@ -1,18 +1,21 @@
 package com.company;
 
+import com.company.creatures.Animal;
+import com.company.creatures.FarmAnimal;
+import com.company.creatures.Human;
+import com.company.creatures.Pet;
 import com.company.devices.Car;
-import com.company.devices.Device;
 import com.company.devices.Phone;
 
 public class Main {
 
     public static void main(String[] args) {
-        Animal dog = new Animal("dog");
+        Animal dog = new Pet("dog");
         dog.name = "Akita";
 
         dog.feed();
 
-        Animal lion = new Animal("lion");
+        Animal lion = new Pet("lion");
         lion.name = "leo";
 
         lion.feed();
@@ -48,17 +51,28 @@ public class Main {
 
         System.out.println(new Phone("Nokia", "3310", 1.0, false, 2000) instanceof Object);
 
+//        try {
+//            me.pet.beEaten();
+//
+//            me.pet.sell();
+//            me.getCar().sell();
+//            me.sell();
+//
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+
+        me.setSalary(null);
+        System.out.println(me.getSalary());
+
+        FarmAnimal pig = new FarmAnimal("pig");
+
         try {
+            pig.beEaten();
             me.pet.beEaten();
-
-            me.pet.sell();
-            me.getCar().sell();
-            me.sell();
-
         } catch (Exception e) {
             e.printStackTrace();
         }
-
     }
 }
 
