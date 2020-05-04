@@ -7,9 +7,12 @@ import com.company.creatures.Pet;
 import com.company.devices.Car;
 import com.company.devices.Phone;
 
+import java.net.MalformedURLException;
+import java.net.URL;
+
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws MalformedURLException {
         Animal dog = new Pet("dog");
         dog.name = "Akita";
 
@@ -28,6 +31,7 @@ public class Main {
         Car dirtyOne = new Car("Fiat", "Bravo", 2014, 1.8);
         dirtyOne.plates = "GDA1234";
         me.setCar(dirtyOne);
+        me.phone = new Phone("Noka", "3310", 1.0, false, 1999);
 
         System.out.println(me.getCar().plates);
 
@@ -67,12 +71,29 @@ public class Main {
 
         FarmAnimal pig = new FarmAnimal("pig");
 
-        try {
-            pig.beEaten();
-            me.pet.beEaten();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+
+        String[] apps = {"facebook", "messenger"};
+
+        me.phone.installAnApp("facebook");
+        me.phone.installAnApp("facebook", "2.4.21");
+        me.phone.installAnApp(apps);
+        me.phone.installAnApp(new URL("https", "https://myserver/facebook/2.5.2", 443, "facebook"));
+
+        Animal parrot = new Pet("parrot");
+        Animal cow = new FarmAnimal("cow");
+        Animal myBrother = new Human();
+
+        System.out.println(parrot.toString());
+        System.out.println(cow.toString());
+        System.out.println(myBrother.toString());
+
+        me.feed();
+        me.feed();
+
+        me.pet.feed();
+        me.pet.feed();
+        me.pet.feed(0.2);
+
     }
 }
 

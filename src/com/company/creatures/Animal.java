@@ -4,7 +4,7 @@ import com.company.Saleable;
 
 import java.io.File;
 
-public abstract class Animal implements Edible, Saleable {
+public abstract class Animal implements Edible, Saleable, Feedable {
     final public String species;
     public String name;
     protected Double weight;
@@ -13,6 +13,7 @@ public abstract class Animal implements Edible, Saleable {
     static final public Double DEFAULT_DOG_WEIGHT = 10.0;
     static final public Double DEFAULT_LION_WEIGHT = 190.0;
     static final public Double DEFAULT_MOUSE_WEIGHT = 0.05;
+    private final static Double DEFAULT_FOOD_WEIGHT = 1.5;
 
 
     public Animal(String species) {
@@ -31,10 +32,14 @@ public abstract class Animal implements Edible, Saleable {
     }
 
     public void feed() {
+        feed(DEFAULT_FOOD_WEIGHT);
+    }
+
+    public void feed(Double feedWeight) {
         if (weight <= 0) {
             System.out.println("too late, sorry");
         } else {
-            weight++;
+            weight += feedWeight;
             System.out.println("thx for food my weight is now " + this.weight);
         }
     }
@@ -51,7 +56,7 @@ public abstract class Animal implements Edible, Saleable {
     }
 
     public String toString() {
-        return this.species + " " + this.name;
+        return "Animal: " + this.species + " " + this.name;
     }
 
     @Override

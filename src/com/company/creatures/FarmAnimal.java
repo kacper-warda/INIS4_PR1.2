@@ -5,4 +5,8 @@ public class FarmAnimal extends Animal {
         super(species);
     }
 
+    public String toString() {
+        return "FarmAnimal " + super.toString();
+    }
+
 }
