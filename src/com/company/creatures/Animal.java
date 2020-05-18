@@ -1,6 +1,7 @@
 package com.company.creatures;
 
 import com.company.Saleable;
+import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import java.io.File;
 
@@ -75,10 +76,7 @@ public abstract class Animal implements Edible, Saleable, Feedable, Comparable<A
     }
 
     @Override
-    public void sell() throws Exception {
-        if (this instanceof Human) {
-            throw new Exception("slavery is banned now, sorry");
-        }
-        System.out.println(" now you sold an animal " + this);
+    public void sell(Human seller, Human buyer, Double price) throws Exception {
+        throw new NotImplementedException();
     }
 }

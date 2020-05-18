@@ -1,5 +1,8 @@
 package com.company.devices;
 
+import com.company.creatures.Human;
+import sun.reflect.generics.reflectiveObjects.NotImplementedException;
+
 import java.net.MalformedURLException;
 import java.net.URL;
 
@@ -40,5 +43,10 @@ public class Phone extends Device {
 
     public String toString() {
         return "Phone: " + this.producer + " " + this.model + " " + this.screenSize;
+    }
+
+    @Override
+    public void sell(Human seller, Human buyer, Double price) throws Exception {
+        throw new NotImplementedException();
     }
 }

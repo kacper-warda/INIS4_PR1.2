@@ -24,7 +24,4 @@ public abstract class Device implements Saleable {
         return this.producer + " " + this.model;
     }
 
-    public void sell() {
-        System.out.println(" now you sold " + this);
-    }
 }
