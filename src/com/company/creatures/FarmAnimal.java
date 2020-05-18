@@ -5,6 +5,11 @@ public class FarmAnimal extends Animal {
         super(species);
     }
 
+    public FarmAnimal(String species, Double weight) {
+        super(species);
+        this.weight = weight;
+    }
+
     public String toString() {
         return "FarmAnimal " + super.toString();
     }

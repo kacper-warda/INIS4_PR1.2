@@ -9,6 +9,8 @@ import com.company.devices.Phone;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.Arrays;
+import java.util.Scanner;
 
 public class Main {
 
@@ -81,7 +83,7 @@ public class Main {
 
         Animal parrot = new Pet("parrot");
         Animal cow = new FarmAnimal("cow");
-        Animal myBrother = new Human();
+        Human myBrother = new Human();
 
         System.out.println(parrot.toString());
         System.out.println(cow.toString());
@@ -93,6 +95,36 @@ public class Main {
         me.pet.feed();
         me.pet.feed();
         me.pet.feed(0.2);
+
+
+        Scanner sc = new Scanner(System.in);
+//
+//        int i = 4;
+//        while (i-- > 0) {
+//            String species = sc.nextLine();
+//            Animal animal = new FarmAnimal(species);
+//            System.out.println(animal);
+//        }
+
+        int size = 3;
+        String[] names = new String[size];
+
+        names[0] = "Kacper";
+        names[1] = "Adrian";
+        names[2] = "Andrzej";
+
+        me.farm[0] = new FarmAnimal("cow", 1200.0);
+        me.farm[1] = new FarmAnimal("goat", 15.0);
+        me.farm[2] = new FarmAnimal("horse", 1000.0);
+
+
+        Integer[] numbers = {1, 2, 3};
+
+        Arrays.sort(me.farm);
+
+        for (int i = 0; i < me.farm.length; i++) {
+            System.out.println(me.farm[i]);
+        }
 
     }
 }

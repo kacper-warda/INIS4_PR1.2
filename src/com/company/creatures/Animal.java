@@ -4,7 +4,7 @@ import com.company.Saleable;
 
 import java.io.File;
 
-public abstract class Animal implements Edible, Saleable, Feedable {
+public abstract class Animal implements Edible, Saleable, Feedable, Comparable<Animal> {
     final public String species;
     public String name;
     protected Double weight;
@@ -29,6 +29,12 @@ public abstract class Animal implements Edible, Saleable, Feedable {
                 this.weight = DEFAULT_DOG_WEIGHT;
                 break;
         }
+    }
+
+
+    @Override
+    public int compareTo(Animal otherAnimal) {
+        return (int) (this.weight - otherAnimal.weight);
     }
 
     public void feed() {

@@ -4,11 +4,14 @@ import com.company.devices.Car;
 import com.company.devices.Phone;
 
 public class Human extends Animal {
+    private static final int DEFATULT_FARM_SIZE = 3;
     public String firstName;
     public String lastName;
     public Animal pet;
     public Phone phone;
     private Car car;
+
+    public FarmAnimal[] farm;
 
     //v 1
     private Double salary = 200.0;
@@ -16,6 +19,13 @@ public class Human extends Animal {
     public Human() {
         super("homo sapiens");
         this.weight = 80.0;
+        this.farm = new FarmAnimal[DEFATULT_FARM_SIZE];
+    }
+
+    public Human(Integer farmSize) {
+        super("homo sapiens");
+        this.weight = 80.0;
+        this.farm = new FarmAnimal[farmSize];
     }
 
     public Double getSalary() {
